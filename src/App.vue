@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
+  <button class="btn btn-primary">Button</button>
   <p>
     <router-link to="/">Go to Home</router-link>
     <br />
