@@ -1,7 +1,7 @@
+<script setup lang="ts">
+import HomePage from "@/components/HomePage/index.vue";
+</script>
+
 <template>
-  <div>Home view</div>
+  <HomePage />
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>
