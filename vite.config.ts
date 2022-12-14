@@ -1,13 +1,17 @@
 import vue from "@vitejs/plugin-vue";
-import path from "path";
 import { defineConfig } from "vite";
+import Pages from "vite-plugin-pages";
+import generateSitemap from "vite-plugin-pages-sitemap";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
+  plugins: [
+    vue(),
+    Pages({
+      onRoutesGenerated: (routes) => {
+        console.log("executed");
+        return generateSitemap({ routes });
+      },
+    }),
+  ],
 });
